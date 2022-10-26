@@ -349,7 +349,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * 30px);
-  margin-right: calc(-1 * 10px);
+  
  }
 
  .projects-list > .item {
@@ -357,12 +357,9 @@ img {
   margin-left: 30px;
   margin-top: 30px;
  }
- .projects-list .item + .item {
- 
- }
 
  .projects-list li {
-  border: 1px solid #EEEEEE;
+  
  }
  .projects-list h3 {
   padding-left: 24px;
@@ -389,7 +386,7 @@ img {
  }
  
  .card-content {
-
+  border: 1px solid #EEEEEE;
  }
  /* Футер */
  footer {
