@@ -185,7 +185,8 @@ img {
 }
 /* Блок з Нашими особливостями */
 .softskills {
-  padding-top: 100px;
+  padding-top: 94px;
+  
 }
 
 .skills {
@@ -213,27 +214,27 @@ img {
     margin-top: 10px;
 }
  /*  блок Чим ми займаємося */
- .about h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2px;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
- }
-
-
  .about {
   padding-top: 94px;
   padding-bottom: 94px;
   text-align: center;
  }
 
+ .about-name {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 71px;
+ }
+
  .about-photo {
   display: flex;
   flex-wrap: wrap;
  }
+
  .about li {
-  margin-top: 50px;
   flex-basis: calc(100% / 3 - 30px);
  }
 
@@ -246,6 +247,7 @@ img {
  .team {
     background-color: var(--team-background);
     padding-bottom: 94px;
+    padding-top: 94px;
     text-align: center;
 
  }
@@ -254,7 +256,7 @@ img {
    font-size: 36px;
    line-height: 1.2;
    letter-spacing: 0.03em;
-   padding-top: 94px;
+   
  }
     
  .team h2,
