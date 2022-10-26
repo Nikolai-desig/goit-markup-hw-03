@@ -154,6 +154,7 @@ img {
 .hero-logo {
     padding-top: 200px;
 
+    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
@@ -201,8 +202,9 @@ img {
    line-height: 1.1;
    letter-spacing: 0.03em;
    }
+
 .skills p{
-    
+    width: 270px;   
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
@@ -301,13 +303,17 @@ img {
   margin: auto;
   justify-content: center;
  }
+
+
  
- .portfolio-button li{
-  margin-left: 8px;
-  margin-right: 8px;
-  
+ .portfolio-button li + li{
+  margin-left: 8px;  
  }
+
+ 
+
  .portfolio-button button {
+
    font-family: inherit;
    font-weight: 500;
    font-size: 16px;
@@ -318,7 +324,7 @@ img {
    background-color: var(--team-background);
    border: 1px solid transparent;
    border-radius: 4px;
-   padding: 0 22px;
+   padding: 6px 22px;
  }
  .portfolio-button button:hover {
    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -332,6 +338,9 @@ img {
    color: var(--background-and-text);
    background-color: var(--accent-text);
  }
+ .portfolio-button button:not(:last-child) {
+  margin-right: 8px;
+ }
 
  /* секця/блок проекти */
  .projects-list {
@@ -339,11 +348,14 @@ img {
   padding-bottom: 94px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: calc(-1 * 30px);
+  margin-right: calc(-1 * 10px);
  }
 
- .projects-list .item {
-  flex-basis: calc(100% / 3);
-  
+ .projects-list > .item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
  }
  .projects-list .item + .item {
  
