@@ -27,6 +27,32 @@ a {
     text-decoration: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1, 
+h2, 
+h3, 
+ul, 
+p {
+  margin: inherit;
+}
+
+img {
+  display: block;
+  min-width: 100%;
+  height: auto;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
  .visually-hidden {
       position: absolute;
       white-space: nowrap;
@@ -41,6 +67,11 @@ a {
   }
  
   /* Шапка */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
   .logo-header {
     font-family: 'Raleway';
     font-size: 26px;
@@ -56,7 +87,20 @@ a {
     list-style: none;
 }
 
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+.site-nav li:not(:last-child) {
+  margin-right: 50px;
+}
+
+
 .site-nav a {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.1;
@@ -71,6 +115,20 @@ a {
 }
 .site-nav .current {
    color: var(--accent-text);
+}
+
+.site-info {
+  display: flex;
+  margin-left: auto;
+}
+.site-info li + li {
+  margin-left: 50px;
+}
+
+.site-info a {
+  display: block;
+    padding-top: 32px;
+    padding-bottom: 32px
 }
 
 .site-info a {
@@ -91,8 +149,11 @@ a {
 /* Основний заголовок з кнопкою */
 .hero {
     background-color: var(--block-background);
+    text-align: center;
 }
-.hero h1 {
+.hero-logo {
+    padding-top: 200px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
@@ -102,21 +163,43 @@ a {
     color: var(--background-and-text);
 }
 .hero button {
+  margin-top: 30px;
+  margin-bottom: 200px;
+
    font-family: inherit;
    font-weight: 700;
    font-size: 16px;
+   line-height: 1.9;
    background: var(--accent-text);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    border-radius: 4px;
    cursor: pointer;
+   text-align: center;
    color: var(--background-and-text);
+   border: 1px solid transparent;
+   letter-spacing: 0.06em;
+}
+.hero-button {
+  padding: 10px 32px;
 }
 /* Блок з Нашими особливостями */
+.softskills {
+  padding-top: 100px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills li {
+  flex-basis: calc(100% / 4);
+}
 .skills h3 {
    text-transform: uppercase;
    font-weight: 700;
    font-size: 14px;
    line-height: 1.1;
+   letter-spacing: 0.03em;
    }
 .skills p{
     
@@ -125,53 +208,105 @@ a {
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--other-text);
+    margin-top: 10px;
 }
  /*  блок Чим ми займаємося */
+ .about h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+ }
 
+
+ .about {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: center;
+ }
+
+ .about-photo {
+  display: flex;
+  flex-wrap: wrap;
+ }
+ .about li {
+  margin-top: 50px;
+  flex-basis: calc(100% / 3 - 30px);
+ }
+
+ .about li + li {
+  margin-left: 30px;
+ }
  /* блок Наша команда */
+
+
  .team {
     background-color: var(--team-background);
-    
+    padding-bottom: 94px;
+    text-align: center;
+
  }
  .ourteam {
    font-weight: 700;
    font-size: 36px;
    line-height: 1.2;
    letter-spacing: 0.03em;
+   padding-top: 94px;
  }
     
  .team h2,
  .team h3 {
     color: var(--primary-text-color);
  }
-
-
- .teammate-igor {
-   
+ .teamlist {
+  display: flex;
+  flex-wrap: wrap;
+  
  }
- 
- .teammate-olga {
-
+ .teamlist li + li {
+  margin-left: 30px;
  }
- 
- .teammate-mukola {
-
+ .teamlist li{
+  margin-top: 50px;
+  flex-basis: calc(100% / 4 - 30px);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--background-and-text);
  }
- 
- .teammate-mukhailo {
-
+ .teamlist h3{
+  margin-top: 30px;
+  text-align: center;
  }
-
+ .teammate-info {
+  text-align: center;
+ }
  .teamlist p{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+    
+    margin-top: 10px;
+    margin-bottom: 30px;
    
     color: var(--other-text);
  }
 
  /* блок кнопок портфоліо */
+ .portfolio-button {
+  padding-top: 94px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+ }
+ 
+ .portfolio-button li{
+  margin-left: 8px;
+  margin-right: 8px;
+  
+ }
  .portfolio-button button {
    font-family: inherit;
    font-weight: 500;
@@ -181,6 +316,9 @@ a {
    cursor: pointer;
    color: var(--primary-text-color);
    background-color: var(--team-background);
+   border: 1px solid transparent;
+   border-radius: 4px;
+   padding: 0 22px;
  }
  .portfolio-button button:hover {
    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -196,26 +334,60 @@ a {
  }
 
  /* секця/блок проекти */
+ .projects-list {
+  padding-top: 50px;
+  padding-bottom: 94px;
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+ .projects-list .item {
+  flex-basis: calc(100% / 3);
+  
+ }
+ .projects-list .item + .item {
+ 
+ }
+
+ .projects-list li {
+  border: 1px solid #EEEEEE;
+ }
  .projects-list h3 {
+  padding-left: 24px;
+
    font-style: normal;
    font-weight: 700;
    font-size: 18px;
    line-height: 2;
    letter-spacing: 0.06em;
    color: var(--primary-text-color);
+   margin-top: 20px;
  }
  .projects-list p {
+  padding-left: 24px;
+  padding-bottom: 20px;
+
    font-style: normal;
    font-weight: 400;
    font-size: 16px;
    line-height: 1.9;
    letter-spacing: 0.03em;
    color: var(--other-text);
+   margin-top: 4px;
  }
+ 
+ .card-content {
 
+ }
  /* Футер */
  footer {
     background-color: var(--block-background);
+    padding-top: 60px;
+ }
+
+ footer address {
+  margin-top: 20px;
+  padding-bottom: 65px;
  }
 
  .logo-footer {
@@ -246,7 +418,9 @@ a {
  .footer-info .site_adress:focus {
    color: var(--accent-text);
  }
-
+ .footer-info li {
+  margin-top: 9px;
+ }
  .footer-info a {
    font-style: normal;
    font-weight: 400;
