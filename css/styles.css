@@ -19,10 +19,16 @@
     --block-background: #2F303A;
     --team-background: #F5F4FA;
 }
+
+header {
+  border-bottom: 1px solid #ECECEC;
+}
+
 body {
    background-color: var(--background-and-text);
    font-family: 'Roboto', sans-serif;
 }
+
 a {
     text-decoration: none;
 }
@@ -48,8 +54,15 @@ img {
 }
 .container {
   width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 
@@ -150,9 +163,11 @@ img {
 .hero {
     background-color: var(--block-background);
     text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-logo {
-    padding-top: 200px;
+    
 
     width: 696px;
     font-weight: 900;
@@ -165,7 +180,7 @@ img {
 }
 .hero button {
   margin-top: 30px;
-  margin-bottom: 200px;
+  
 
    font-family: inherit;
    font-weight: 700;
@@ -175,13 +190,19 @@ img {
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    border-radius: 4px;
    cursor: pointer;
-   text-align: center;
+   
    color: var(--background-and-text);
-   border: 1px solid transparent;
+   border: none;
    letter-spacing: 0.06em;
 }
 .hero-button {
   padding: 10px 32px;
+}
+.hero button:hover {
+  background-color: #188CE8;
+}
+.hero button:focus {
+  background-color: #188CE8;
 }
 /* Блок з Нашими особливостями */
 .softskills {
@@ -191,10 +212,14 @@ img {
 
 .skills {
   display: flex;
-  flex-wrap: wrap;
+
 }
 .skills li {
   flex-basis: calc(100% / 4);
+}
+
+.skills li + li {
+  margin-left: 30px;
 }
 .skills h3 {
    text-transform: uppercase;
@@ -202,16 +227,18 @@ img {
    font-size: 14px;
    line-height: 1.1;
    letter-spacing: 0.03em;
+   margin-left: 0;
    }
 
 .skills p{
-    width: 270px;   
+      
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--other-text);
     margin-top: 10px;
+    margin-left: 0;
 }
  /*  блок Чим ми займаємося */
  .about {
@@ -223,10 +250,10 @@ img {
  .about-name {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.2px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin-bottom: 71px;
+  margin-bottom: 50px;
  }
 
  .about-photo {
@@ -258,7 +285,9 @@ img {
    letter-spacing: 0.03em;
    
  }
-    
+ .team h2 {
+  margin-bottom: 50px;
+ }  
  .team h2,
  .team h3 {
     color: var(--primary-text-color);
@@ -272,18 +301,20 @@ img {
   margin-left: 30px;
  }
  .teamlist li{
-  margin-top: 50px;
+  
   flex-basis: calc(100% / 4 - 30px);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--background-and-text);
  }
  .teamlist h3{
-  margin-top: 30px;
+  margin-bottom: 0;
   text-align: center;
  }
  .teammate-info {
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
  }
  .teamlist p{
     font-weight: 400;
@@ -292,17 +323,15 @@ img {
     letter-spacing: 0.03em;
     
     margin-top: 10px;
-    margin-bottom: 30px;
+    
    
     color: var(--other-text);
  }
 
  /* блок кнопок портфоліо */
  .portfolio-button {
-  padding-top: 94px;
+
   display: flex;
-  flex-wrap: wrap;
-  margin: auto;
   justify-content: center;
  }
 
@@ -324,7 +353,7 @@ img {
    cursor: pointer;
    color: var(--primary-text-color);
    background-color: var(--team-background);
-   border: 1px solid transparent;
+   border: none;
    border-radius: 4px;
    padding: 6px 22px;
  }
@@ -346,25 +375,21 @@ img {
 
  /* секця/блок проекти */
  .projects-list {
-  padding-top: 50px;
-  padding-bottom: 94px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * 30px);
+  gap: 30px;
   
  }
 
  .projects-list > .item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  flex-basis: calc(100% / 3 - 30px);  
  }
 
  .projects-list li {
   
  }
  .projects-list h3 {
-  padding-left: 24px;
 
    font-style: normal;
    font-weight: 700;
@@ -372,11 +397,8 @@ img {
    line-height: 2;
    letter-spacing: 0.06em;
    color: var(--primary-text-color);
-   margin-top: 20px;
  }
  .projects-list p {
-  padding-left: 24px;
-  padding-bottom: 20px;
 
    font-style: normal;
    font-weight: 400;
@@ -388,17 +410,23 @@ img {
  }
  
  .card-content {
+  padding-left: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   border: 1px solid #EEEEEE;
+  border-top: 0;
  }
  /* Футер */
  footer {
     background-color: var(--block-background);
     padding-top: 60px;
+    padding-bottom: 60px;
  }
 
  footer address {
   margin-top: 20px;
-  padding-bottom: 65px;
+  
  }
 
  .logo-footer {
@@ -432,6 +460,11 @@ img {
  .footer-info li {
   margin-top: 9px;
  }
+
+.footer-info li:first-child {
+  margin-top: 0;
+}
+
  .footer-info a {
    font-style: normal;
    font-weight: 400;
